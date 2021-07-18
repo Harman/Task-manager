@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav-bar {
+  height: 12%;
+  background-color: #333333;
+  display: flex;
+}
+
+.grid {
+  min-height: 88%;
+  background-color: #e1e5ea;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+}
+
+.filter-container,
+.action-container,
+.info-container {
+  height: 75%;
+  width: 17.5rem;
+  border-radius: 2px;
+  margin-left: 5.8rem;
+  background-color: #444444;
+  margin-top: 1.5vh;
+}
+
+.filter-container {
+  width: 14rem;
+  display: flex;
+}
+
+.action-container {
+  width: 7rem;
+  display: flex;
+}
+
+.info-container {
+  width: 3.5rem;
+  display: flex;
+  margin: auto;
+}
+
+.filter {
+  height: 100%;
+  width: 25%;
+}
+
+.filter div {
+  margin: auto;
+  margin-top: 2.3vh;
+  height: 50%;
+  width: 50%;
+  border-radius: 2px;
+}
+
+.filter:hover,
+.action-container div:hover {
+  background-color: #393939;
+}
+
+.selected-state {
+  background-color: #393939 !important;
+  border: 2px solid #a5f3d6;
+}
+
+.pink-color-btn,
+.pink {
+  background-color: #d595aa;
+}
+
+.blue-color-btn,
+.blue {
+  background-color: #5ecdde;
+}
+
+.green-color-btn,
+.green {
+  background-color: #91e6c7;
+}
+
+.black-color-btn,
+.black {
+  background-color: black;
+}
+
+.add,
+.delete,
+.info {
+  width: 50%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding-top: 5%;
+  font-size: 2.5rem;
+}
+
+.modal-container {
+  height: 18rem;
+  width: 35rem;
+  display: flex;
+  position: fixed;
+  top: calc((100vh - 18rem) / 2);
+  left: calc((100vw - 35rem) / 2);
+  box-shadow: 0px 5px 8px 0px #aaa;
+}
+
+.text-area {
+  height: 100%;
+  width: 75%;
+  background-color: white;
+  padding: 2rem;
+  outline: none;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter-area {
+  height: 100%;
+  width: 25%;
+  background-color: #444444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-filter {
+  width: 50%;
+  height: 2.5rem;
+  margin-bottom: 1.1rem;
+  opacity: 0.7;
+}
+
+.modal-filter:hover {
+  opacity: 1;
+}
+
+.ticket {
+  height: 8rem;
+  width: 15rem;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.ticket-color {
+  height: 7%;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ticket-id {
+  height: 18%;
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #989393;
+}
+
+.ticket-box {
+  height: 75%;
+  width: 100%;
+  overflow: auto;
+  font-family: fantasy, cursive;
+  font-size: 15px;
+  outline: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 7px;
+}
+
+.active-modal-filter {
+  border: 4px #0a7be4ee solid;
+  opacity: 1;
+}
+
+.make-btn {
+  border-radius: 50%;
+  background-color: rgba(26, 35, 37, 0.897);
+  color: #15c39a;
+  border-color: transparent;
+}
+
+@media (max-width: 786px) {
+  .ticket {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .filter-container {
+    width: 18rem;
+  }
+
+  .action-container {
+    width: 10rem;
+  }
+
+  .add,
+  .delete {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 850px) {
+  .filter-container,
+  .action-container,
+  .info-container {
+    height: 50%;
+    margin-top: 2.4vh;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+
+  .filter-container {
+    width: 70%;
+  }
+
+  .filter div {
+    margin: auto;
+    margin-top: 1.5vh;
+    height: 50%;
+    width: 50%;
+    border-radius: 2px;
+  }
+
+  .add,
+  .delete,
+  .info {
+    padding-top: 0%;
+  }
+
+  .modal-container {
+    height: 14rem;
+    width: 24rem;
+    top: calc((100vh - 14rem) / 2);
+    left: calc((100vw - 24rem) / 2);
+  }
+}
+
+@media (max-width: 600px) and (max-height: 750px) {
+  .filter-container,
+  .action-container,
+  .info-container {
+    height: 64%;
+    margin-top: 2.2vh;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+
+  .filter div {
+    margin: auto;
+    margin-top: 2.2vh;
+    height: 50%;
+    width: 50%;
+    border-radius: 2px;
+  }
+
+  .add,
+  .delete,
+  .info {
+    padding-top: 3%;
+  }
+
+  .modal-container {
+    height: 14rem;
+    width: 24rem;
+    top: calc((100vh - 14rem) / 2);
+    left: calc((100vw - 24rem) / 2);
+  }
+}
